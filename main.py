@@ -2,8 +2,8 @@ import streamlit as st
 
 siteHeader=st.beta_container()
 with siteHeader:
-    st.title('Modelo de Evaluaci[on de ingresos')
-    st.markdown("""En este proyecto se busca encontrar cu[ales son principales que pueden predecir""")
+    st.title('Modelo de Evaluación de ingresos')
+    st.markdown("""En este proyecto se busca encontrar cuáles son las variables principales que pueden predecir""")
     
     
 newFeatures = st.beta_container()
@@ -21,7 +21,7 @@ data=df[['age','workclass','education']]
 st.write(df.sample(5))
 
 st.subheader('Distribuciones: ')
-st.text('Esta es la gr[afica de distribuci[on por edad')
+st.text('Esta es la gráfica de distribución por edad')
 
 distribution_age=pd.DataFrame(df['age'].value_counts())
 st.bar_chart(distribution_age)
@@ -32,7 +32,7 @@ st.bar_chart(distribution_sex)
 modelTraining = st.beta_container()
 with modelTraining:
     st.header('Entrenamiento del modelo')
-    st.text('En esta secci[on puedes seleccionar la profundidad')
+    st.text('En esta sección puedes seleccionar la profundidad del modelo')
     
 df = df.drop(['Unnamed: 0','income','fnlwgt','capital-gain','capital-loss','native-country'], axis=1)
 Y = df['income_bi']
